@@ -1,0 +1,20 @@
+{% load static %}  
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/save.css' %}"/>  
+</head>  
+<body>  
+<form method="POST" class="post-form">  
+        {% csrf_token %}  
+        Stock Id:<input type="text" name="sid" maxlength="100" size="50" value="{{ stock.sid }}"><br>
+        Stock Name:<input type="text" name="sname" maxlength="100" size="50" value="{{ stock.sname }}"><br>
+        Stock Quantity:<input type="text" name="squantity" maxlength="100" size="50" value="{{ stock.squantity }}"><br> 
+        <button type="submit" class="btn btn-outline-primary btn-md">Submit</button>    
+</form>  
+</body>  
+</html> 
